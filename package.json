@@ -1,0 +1,14 @@
+{
+  "name": "json_encrypt",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "description": "Simple JSON encryption/decryption for browser and server communications",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}

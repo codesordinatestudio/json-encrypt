@@ -1,0 +1,7 @@
+{
+  "name": "@codesordinate/json-encrypt",
+  "version": "1.0.0",
+  "description": "Simple JSON encryption/decryption for browser and server communications",
+  "exports": "./mod.ts",
+  "license": "MIT"
+}
