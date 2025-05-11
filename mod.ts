@@ -6,6 +6,7 @@
  * 2. Generate a random n-digit key
  * 3. Insert the key at a random position in the encoded string
  * 4. Append the key length and insertion position at the end
+ * @module
  */
 export function encryptJSON<T>(json: T): string {
   // Convert JSON to string and encode with base64
