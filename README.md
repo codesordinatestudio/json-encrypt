@@ -27,12 +27,6 @@ bunx jsr add @codesordinate/json-encrypt
 npx jsr add @codesordinate/json-encrypt
 ```
 
-### Manual Import (Deno/Browser)
-
-```typescript
-import { encryptJSON, decryptJSON } from "https://jsr.io/@codesordinate/json-encrypt/mod.ts";
-```
-
 ## How It Works
 
 This utility uses a simple yet effective approach to protect JSON data in transit:
