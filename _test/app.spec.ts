@@ -8,7 +8,7 @@ const smallData = {
 };
 
 const encryptedSmallData =
-  "eyJuYW1lIjoiQWxpY2UiLCJhZ2UiOjMwLCJob2JiaWVzIjpbInJlYWRc4ewg9rcopbmciLCJoaWtpbmciXX0=090005";
+  "eyJuYW1lIjoiQWxpY2UiLCJhZ2UiOjMwLCJob2JiaWVzIjpbInJlYWRc4ewg9rcopbmciLCJoaWtpbmciXX0=0900055";
 
 describe("JSON Encrypt/Decrypt", () => {
   it("should store snapshot", () => {

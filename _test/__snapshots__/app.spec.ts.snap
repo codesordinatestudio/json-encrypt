@@ -5,29 +5,16 @@ exports[`JSON Encrypt/Decrypt should store snapshot 1`] = `
   "decryptLogic": 
 "function decryptJSON(encrypted) {
   try {
-    const insertPositionStr = encrypted.slice(-5);
-    const keyLengthStr = encrypted.slice(-7, -5);
-    const insertPosition = parseInt(insertPositionStr, 10);
-    const keyLength = parseInt(keyLengthStr, 10);
-    const encodedWithKey = encrypted.slice(0, -7);
-    const base64 = encodedWithKey.substring(0, insertPosition) + encodedWithKey.substring(insertPosition + keyLength);
-    const jsonStr = atob(base64);
+    const insertPositionStr = encrypted.slice(-5), keyLengthStr = encrypted.slice(-7, -5), insertPosition = parseInt(insertPositionStr, 10), keyLength = parseInt(keyLengthStr, 10), encodedWithKey = encrypted.slice(0, -7), base64 = encodedWithKey.substring(0, insertPosition) + encodedWithKey.substring(insertPosition + keyLength), jsonStr = atob(base64);
     return JSON.parse(jsonStr);
   } catch (error) {
-    throw new Error(\`Decryption failed: Invalid character\`);
+    throw new Error("Decryption failed: Invalid character");
   }
 }"
 ,
   "encryptLogic": 
 "function encryptJSON(json) {
-  const jsonStr = JSON.stringify(json);
-  const base64 = btoa(jsonStr);
-  const keyLength = Math.floor(Math.random() * 5) + 8;
-  const key = Math.random().toString(36).substring(2, 2 + keyLength);
-  const insertPosition = Math.floor(Math.random() * base64.length);
-  const encodedWithKey = base64.substring(0, insertPosition) + key + base64.substring(insertPosition);
-  const keyLengthStr = keyLength.toString().padStart(2, "0");
-  const insertPositionStr = insertPosition.toString().padStart(5, "0");
+  const jsonStr = JSON.stringify(json), base64 = btoa(jsonStr), keyLength = Math.floor(Math.random() * 5) + 8, key = Math.random().toString(36).substring(2, 2 + keyLength), insertPosition = Math.floor(Math.random() * base64.length), encodedWithKey = base64.substring(0, insertPosition) + key + base64.substring(insertPosition), keyLengthStr = keyLength.toString().padStart(2, "0"), insertPositionStr = insertPosition.toString().padStart(5, "0");
   return encodedWithKey + keyLengthStr + insertPositionStr;
 }"
 ,
