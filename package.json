@@ -1,6 +1,6 @@
 {
   "name": "json_encrypt",
-  "module": "index.ts",
+  "module": "mod.ts",
   "type": "module",
   "private": true,
   "license": "MIT",
